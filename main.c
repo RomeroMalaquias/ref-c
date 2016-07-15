@@ -7,11 +7,12 @@ int main() {
 #ifdef TAG
     int y = 1;
 #endif
-    if (x 
-#ifdef TAG 
-        && y 
+    int test = x;
+#ifdef TAG
+    test = test && y;
 #endif
-    ) {
+    if (test)
+    {
         printf("YES!");
     } else { 
         print("NO!");
